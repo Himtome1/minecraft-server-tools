@@ -17,7 +17,7 @@
     }
     if (p.kind === 'reference') {
       var r = p.name + ' is usually run at ' + p.a + ' GB for a small group (pack listings and public server guides).';
-      if (n > 5) r += ' For ' + (n > 10 ? '10–20' : '6–10') + ' players the estimate is ' + g + ' GB.';
+      if (n > 5) r += ' For ' + (n > 10 ? '11–20' : '6–10') + ' players the estimate is ' + g + ' GB.';
       return r;
     }
     var o = p.base === 4 ? 'Lighter or older packs usually run on 4–6 GB for a small group.' : p.base === 6 ? "Newer (1.18+) modpacks shouldn't go below 6 GB." : 'Big kitchen-sink packs usually start at 8 GB.';
