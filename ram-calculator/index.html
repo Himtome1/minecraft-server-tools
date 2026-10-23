@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minecraft server RAM calculator</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Minecraft server RAM calculator</h1>
+<p>Pick your pack and how many people will play. You'll get a RAM size to start from and the reason for it.</p>
+
+<div class="grid">
+<section class="box" aria-label="Your server">
+<label for="pack">Your pack</label>
+<select id="pack"></select>
+<p class="hint">Not listed? Pick a mod count under "Another modpack".</p>
+<label for="players">Players online at the same time</label>
+<div class="pl"><input type="range" id="players" min="1" max="20" step="1" value="4"><output id="plout" for="players">4</output></div>
+<p class="hint">Count the busiest evening, not everyone on the whitelist.</p>
+</section>
+<section class="box" id="out" aria-live="polite"><p class="hint" id="loading">Loading pack data…</p></section>
+</div>
+
+<section>
+<h2>How this works</h2>
+<p>For catalog packs, the starting size is the one set for that pack in the live catalog. For other packs, it's the size most pack listings and public server guides recommend for a small group, checked October 2026. For bigger groups we add about 1 GB for every 3 extra players, a common rule of thumb for modded servers, so those sizes are estimates.</p>
+<ul class="sources" id="sources"></ul>
+</section>
+
+<footer><p>These tools are not an official Minecraft product. They are not approved by or associated with Mojang or Microsoft.</p></footer>
+</main>
+<script src="calc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

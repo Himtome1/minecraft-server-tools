@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minecraft MOTD generator</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Minecraft MOTD generator</h1>
+<p>Type your two lines, add colours and styles, and copy the result into your server.</p>
+
+<div class="grid">
+<section class="box" aria-label="Your MOTD">
+<div class="tb" id="tb" role="toolbar" aria-label="Colours and styles" aria-controls="l1 l2"></div>
+<p class="hint">Buttons add a code where your cursor is. You can also type codes like <code>&amp;c</code> (red) or <code>&amp;l</code> (bold). A colour code turns off bold and other styles, so put the colour first. <code>&amp;r</code> resets everything.</p>
+<label for="l1">Line 1</label>
+<input type="text" id="l1" maxlength="200" autocomplete="off" spellcheck="false" value="&amp;6&amp;lWelcome to our server">
+<p class="cnt" id="c1" aria-live="polite"></p>
+<label for="l2">Line 2</label>
+<input type="text" id="l2" maxlength="200" autocomplete="off" spellcheck="false" value="&amp;7Survival with friends · &amp;aJoin us">
+<p class="cnt" id="c2" aria-live="polite"></p>
+<p class="hint">Line 2 keeps line 1's colour and styles unless you start it with a code.</p>
+<label for="name">Server name (preview only)</label>
+<input type="text" id="name" maxlength="60" autocomplete="off" value="My Minecraft Server">
+</section>
+
+<section class="box" aria-label="Preview and output">
+<div class="sl" role="group" aria-label="Preview in the server list"><div class="sl-row" id="pv">
+<div class="sl-ico" aria-hidden="true"></div><div class="sl-name" id="pn"></div><div class="sl-pl">0/20</div>
+<div class="sl-l" id="p1"></div><div class="sl-l" id="p2"></div></div></div>
+<p class="hint">The game's own font is narrower, so exact cut-off points can differ a little.</p>
+
+<div class="out"><div class="lbl"><label for="o-props">server.properties line</label><button type="button" data-copy="o-props">Copy</button></div>
+<textarea id="o-props" readonly rows="4" spellcheck="false"></textarea>
+<p class="hint">Replace the <code>motd=</code> line with this. The <code>§</code> codes work in any file encoding.</p></div>
+<div class="out"><div class="lbl"><label for="o-plain">Plain § text</label><button type="button" data-copy="o-plain">Copy</button></div>
+<textarea id="o-plain" readonly rows="3" spellcheck="false"></textarea>
+<p class="hint">For configs and plugins that take legacy § codes.</p></div>
+<div class="out"><div class="lbl"><label for="o-mini">MiniMessage</label><button type="button" data-copy="o-mini">Copy</button></div>
+<textarea id="o-mini" readonly rows="4" spellcheck="false"></textarea>
+<p class="hint">For MOTD plugins that use MiniMessage tags.</p></div>
+</section>
+</div>
+
+<footer><p>These tools are not an official Minecraft product. They are not approved by or associated with Mojang or Microsoft.</p></footer>
+</main>
+<script src="motd.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

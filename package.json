@@ -1,0 +1,13 @@
+{
+  "name": "minecraft-server-tools",
+  "version": "1.0.0",
+  "description": "Free Minecraft server tools: RAM calculator, MOTD generator and server status checker.",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node serve.mjs",
+    "test": "node --test",
+    "status": "node server-status/cli.mjs"
+  }
+}

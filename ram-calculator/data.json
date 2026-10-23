@@ -1,0 +1,36 @@
+{
+  "snapshot": "2026-10",
+  "notes": {
+    "catalog": "Starting sizes for 2-5 players, as set for each pack in the live catalog. group = size estimate for 6-10 players.",
+    "reference": "Low end of the sizes pack listings and public server guides give for a small group (a = 1-5 players, b = 6-10, c = 11-20). Only packs with a source that is not a hosting company are listed.",
+    "other": "Quick rules when the pack is not listed: lighter packs 4 GB, 1.18+ packs at least 6 GB, big kitchen-sink packs 8 GB."
+  },
+  "catalog": [
+    { "id": "cobblemon", "name": "Cobblemon", "rec": 5, "min": 5, "group": 8 },
+    { "id": "cobblemonneo", "name": "Cobblemon (NeoForge)", "rec": 5, "min": 5, "group": 8 },
+    { "id": "cobbleverse", "name": "Cobbleverse", "rec": 6, "min": 6, "group": 8 },
+    { "id": "atm10sky", "name": "All the Mods 10: To the Sky", "rec": 5, "min": 5, "group": 6 },
+    { "id": "rlcraft", "name": "RLCraft", "rec": 5, "min": 5, "group": 6 },
+    { "id": "createplus", "name": "Create+", "rec": 5, "min": 5, "group": 6 },
+    { "id": "slimesadventure", "name": "Slimes Adventure", "rec": 5, "min": 5, "group": 6 },
+    { "id": "fabric", "name": "Fabric (no modpack)", "rec": 4, "min": 3, "group": 0 },
+    { "id": "neoforge", "name": "NeoForge (no modpack)", "rec": 4, "min": 3, "group": 0 },
+    { "id": "forge", "name": "Forge (no modpack)", "rec": 4, "min": 3, "group": 0 },
+    { "id": "paper", "name": "Vanilla (Paper)", "rec": 3, "min": 3, "group": 0 }
+  ],
+  "reference": [
+    { "id": "vh3", "name": "Vault Hunters 3rd Edition", "a": 10, "b": 12, "c": 14, "cpu": true,
+      "source": { "label": "Vault Hunters 3 CurseForge page (pack author: 8 GB, client)", "url": "https://www.curseforge.com/minecraft/modpacks/vault-hunters-1-18-2" } },
+    { "id": "stoneblock3", "name": "StoneBlock 3", "a": 6, "b": 8, "c": 10, "cpu": false,
+      "source": { "label": "FTB StoneBlock 3 pack page (4 GB minimum, 6 GB recommended)", "url": "https://www.feed-the-beast.com/modpacks/100-ftb-stoneblock-3" } },
+    { "id": "gtnh", "name": "GregTech: New Horizons", "a": 6, "b": 10, "c": 14, "cpu": true,
+      "source": { "label": "docker-minecraft-server docs: GTNH", "url": "https://docker-minecraft-server.readthedocs.io/en/latest/types-and-platforms/mod-platforms/gtnh/" } },
+    { "id": "dawncraft", "name": "DawnCraft", "a": 10, "b": 12, "c": 14, "cpu": true,
+      "source": { "label": "DawnCraft CurseForge page (pack author: 6 GB minimum, 8-12 GB recommended, client)", "url": "https://www.curseforge.com/minecraft/modpacks/dawn-craft" } }
+  ],
+  "other": [
+    { "id": "other-lt100", "name": "Under 100 mods", "base": 4 },
+    { "id": "other-100to200", "name": "100-200 mods", "base": 6 },
+    { "id": "other-gt200", "name": "More than 200 mods", "base": 8 }
+  ]
+}
